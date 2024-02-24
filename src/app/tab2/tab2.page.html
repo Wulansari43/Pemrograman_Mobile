@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-title>Purple Army BTS</ion-title>
+  <ion-buttons slot="start">
+  <ion-back-button></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  <ion-content padding>
+  <ion-card class="welcome-card bg-content">
+  <ion-card-header>
+  <ion-card-title color="primary">Registrasi Members</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  <p>Silakan isikan form dibawah untuk pendataan members grup Purple Army BTS Indonesia!</p>
+  <ion-list>
+  <ion-item>
+  <ion-label position="floating"> Nama lengkap </ion-label>
+  <ion-input type="text" [(ngModel)]="nama"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating"> Nomor HP/WA </ion-label>
+  <ion-input type="text" [(ngModel)]="nohp"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label position="floating"> Askot </ion-label>
+  <ion-input type="text" [(ngModel)]="askot"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label position="floating"> Bias </ion-label>
+  <ion-select [(ngModel)]="bias" class="popover-content" 
+ placeholder="Pilih bias">
+  <ion-select-option value="Kim Namjoon (94)">Kim Namjoon(94)</ion-select-option>
+  <ion-select-option value="Kim Seokjin (92)">Kim Seokjin (92)</ion-select-option>
+  <ion-select-option value="Min Yoongi (93)">Min Yoongi (93)</ion-select-option>
+  <ion-select-option value="Jung Hoseok (94)">Jung Hoseok (94)</ion-select-option>
+  <ion-select-option value="Park Jimin (95)">Park Jimin (95)</ion-select-option>
+  <ion-select-option value="Kim TAehyung (95)">Kim Taehyung (95)</ion-select-option>
+  <ion-select-option value="Jeon Jungkook (97)">Jeon Jungkook (97)</ion-select-option>
+   </ion-select>
+   </ion-item>
+   <ion-item>
+   <ion-label position="floating"> Tahun Gabung </ion-label>
+   <ion-select [(ngModel)]="tahungabung" placeholder="Pilih tahun gabung">
+   <ion-select-option value="2022">2022</ion-select-option>
+   <ion-select-option value="2021">2021</ion-select-option>
+   <ion-select-option value="2020">2020</ion-select-option>
+   <ion-select-option value="2019">2019</ion-select-option>
+   <ion-select-option value="2018">2018</ion-select-option>
+   <ion-select-option value="2017">2017</ion-select-option>
+   <ion-select-option value="2016">2016</ion-select-option>
+   <ion-select-option value="2015">2015</ion-select-option>
+   <ion-select-option value="2014">2014</ion-select-option>
+   <ion-select-option value="2013">2013</ion-select-option>
+   </ion-select>
+   </ion-item>
+   <ion-item>
+    <ion-label position="floating"> Tanggal Lahir </ion-label>
+    <ion-input type="text" [(ngModel)]="tanggal_lahir"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating"> Zodiak </ion-label>
+    <ion-input type="text" [(ngModel)]="zodiak"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating"> Fandom </ion-label>
+    <ion-input type="text" [(ngModel)]="fandom"></ion-input>
+    </ion-item>
+    
+  </ion-list>
+  <div padding>
+  <ion-button expand="block" color="primary" size="medium"
+ (click)="addRegister()"><ion-icon name="trending-up-outline"></ion-icon>
+ Daftar</ion-button>
+  
+  </div>
+  </ion-card-content> 
+  </ion-card>
+ </ion-content>
+
+ 

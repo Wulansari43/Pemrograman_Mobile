@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Data Anggota Purple Army BTS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+  </ion-refresher-content>
+</ion-refresher>
+
+<ion-card *ngFor="let anggota of anggotas">
+  <ion-card-header>
+    <ion-card-subtitle> nama : {{anggota.nama}}, nohp : {{anggota.nohp}}</ion-card-subtitle>
+    <ion-card-title>{{anggota.askot}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    bias : {{anggota.bias}},
+    tahungabung : {{anggota.tahungabung}}
+    tanggal_lahir : {{anggota.tanggal_lahir}}
+    zodiak : {{anggota.zodiak}}
+    fandom : {{anggota.fandom}}
+  </ion-card-content>
+</ion-card>
+<ion-infinite-scroll  (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
